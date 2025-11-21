@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamSpace</title>
+</head><body><content-security-policy:></content-security-policy:> script-src 'self' https://images.unsplash.com
+  <style>
+    :root {
+      --azul-marino: #0b1a33;
+      --crema: #f9f5e7;
+      --dorado: #d4af37;
+      --blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--crema);
+      color: var(--azul-marino);
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: var(--azul-marino);
+      color: var(--crema);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    nav a {
+      color: var(--crema);
+      margin-left: 1.2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--dorado);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae') center/cover;
+      color: var(--crema);
+      text-align: center;
+      padding: 10rem 2rem 8rem;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--dorado);
+      color: var(--azul-marino);
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c09b2d;
+    }
+
+    /* ===== SERVICIOS ===== */
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .servicios {
+      text-align: center;
+      background-color: var(--blanco);
+    }
+
+    .servicios h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .servicio {
+      background-color: var(--crema);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid var(--dorado);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .servicio:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .servicio img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== PROYECTOS ===== */
+    .proyectos {
+      text-align: center;
+    }
+
+    .proyectos h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .proyectos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .proyecto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* ===== NOSOTROS ===== */
+    .nosotros {
+      background-color: var(--azul-marino);
+      color: var(--crema);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .nosotros-texto h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: var(--azul-marino);
+      color: var(--crema);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+
+
+
+  <header>
+    <h1>DreamSpace</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Construimos el hogar de tus sueños</h2>
+    <p>Diseño, calidad y compromiso en cada detalle.</p>
+    <a href="#proyectos" class="btn">Ver proyectos</a>
+    <a href="#contacto" class="btn">Contáctanos</a>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <h3>Servicios</h3>
+    <div class="servicios-grid">
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/639/639365.png" alt="Construcción">
+        <h4>Construcción de viviendas</h4>
+        <p>Edificamos con materiales de primera y atención al detalle.</p>
+      </div>
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/862/862856.png" alt="Remodelaciones">
+        <h4>Remodelaciones</h4>
+        <p>Transformamos tus espacios con elegancia y funcionalidad.</p>
+      </div>
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Diseño">
+        <h4>Diseño arquitectónico</h4>
+        <p>Diseños personalizados que reflejan tu estilo de vida.</p>
+      </div>
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Supervisión">
+        <h4>Supervisión de obra</h4>
+        <p>Garantizamos calidad y cumplimiento en cada proyecto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proyectos" id="proyectos">
+    <h3>Proyectos destacados</h3>
+    <div class="proyectos-grid">
+      <div class="proyecto">
+        <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Proyecto 1">
+      </div>
+      <div class="proyecto">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Proyecto 2">
+      </div>
+      <div class="proyecto">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Proyecto 3">
+      </div>
+    </div>
+  </section>
+
+  <section class="nosotros" id="nosotros">
+    <div class="nosotros-texto">
+      <h3>Nosotros</h3>
+      <p>Hacemos construcción elegante y honesta con un enfoque en calidad y compromiso. 
+      Atendemos a las necesidades de cada cliente para hacer realidad sus sueños arquitectónicos.</p>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>© 2025 DreamSpace. Todos los derechos reservados.</p>
+  </footer>
+
+
+</body></html>
